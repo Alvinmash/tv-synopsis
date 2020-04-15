@@ -1,0 +1,13 @@
+ h2(class='season-title')=`Season ${season.number}`
+      table
+        tr(class='header-row')
+          th No.
+          th Title
+          th Director       
+        for episode in season.episodes	
+          tr
+            td(class='episode-number')= episode.number
+            td= episode.title
+            td= episode.director
+          tr
+            td(colspan=3)=episode.synopsis 
